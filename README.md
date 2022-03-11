@@ -21,8 +21,8 @@ the goal is to understand the fault-tolerance modules provided by resilience4j l
 
    It is usually configured to go to HALF-OPEN state after some time-interval. 
    
-   In HALF-OPEN state it can have a different failure condition / threshold by which it determines
-   whether to go to CLOSED state or OPEN state.
+   In HALF-OPEN state, after a configured number of calls are made, the failure threshold is consulted to
+   determine whether circuit-breaker goes to CLOSED state or OPEN state.
 
 
 
@@ -45,8 +45,8 @@ the goal is to understand the fault-tolerance modules provided by resilience4j l
   <em>Retry</em> module performs retry when a client call is timed out and 
   returns success / failure response when number of retry attempts reach configured limit
 
-  <em>RateLimiter</em> module is used to prevent DoS attack to protect the endpoint from spikes in 
-  request traffic. The endpoint will be hit only if the traffic rate meets configured conditions.
+  <em>RateLimiter</em> module is used to protect the endpoint from spikes in request traffic /
+  DDoS attacks. The endpoint will be hit only if the traffic rate meets configured conditions.
 
 
 ### Simulation
@@ -59,8 +59,8 @@ the goal is to understand the fault-tolerance modules provided by resilience4j l
 
    All the code for resilient4j is present only in ServiceA.
   
-   <em> application.yml file in resources has comments that explain the conditions for 
-        circuit breaker state transitions, retry and ratelimit </em>
+   <em> src/main/resources/application.yml </em> has comments that explain the configurations for 
+        circuit breaker state transitions
 
 
 ## References
@@ -73,7 +73,7 @@ the goal is to understand the fault-tolerance modules provided by resilience4j l
 3. [Circuit Breaker Article By Martin Fowler](https://martinfowler.com/bliki/CircuitBreaker.html)
 
 4. [Circuit Breaker Pattern - Fault Tolerant Microservices | Defog Tech | Youtube ](https://www.youtube.com/watch?v=ADHcBxEXvFA): 
-   <em>Cascading failure gif is taken from this reference<em>
+   <em>Cascading failure gif is taken from this reference</em>
 
 5. [What is CircuitBreaking in Microservices | Narendra L | Medium](https://medium.com/@narengowda/what-is-circuitbreaking-in-microservices-2053f4f66882):
    <em>Circuit breaker state diagram taken from this reference</em>
