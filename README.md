@@ -65,9 +65,9 @@ the goal is to understand the fault-tolerance modules provided by resilience4j l
 
 ## References
 
-1. [Resilience4j Tutorial | Daily Code Buffer | Youtube](https://www.youtube.com/watch?v=9AXAUlp3DBw)
+1. [Resilience4j Tutorial | Daily Code Buffer | Youtube](https://www.youtube.com/results?search_query=resilience4j+daily+code+buffer)
 
-2. [shabbirdwd53/resilience4j GitHub](https://www.youtube.com/results?search_query=resilience4j+daily+code+buffer): 
+2. [shabbirdwd53/resilience4j GitHub](https://github.com/shabbirdwd53/resilience4j): 
    <em>Code is taken from this reference</em>
 
 3. [Circuit Breaker Article By Martin Fowler](https://martinfowler.com/bliki/CircuitBreaker.html)
