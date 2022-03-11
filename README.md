@@ -42,7 +42,7 @@ the goal is to understand the fault-tolerance modules provided by resilience4j l
 
 ### Other Fault-tolerant modules explored
 
-  <em>Retry</em> module performs retry when a client call is timed out and 
+  <em>Retry</em> module performs retry when a client request fails to connect to server and 
   returns success / failure response when number of retry attempts reach configured limit
 
   <em>RateLimiter</em> module is used to protect the endpoint from spikes in request traffic /
