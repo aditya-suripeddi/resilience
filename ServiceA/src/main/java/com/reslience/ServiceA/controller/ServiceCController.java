@@ -16,18 +16,9 @@ public class ServiceCController {
     private static String BASE_URL = "http://localhost:8081";
 
     @GetMapping
-    public String serviceA() {
+    public String serviceC() {
         String url = BASE_URL + "/b";
         emailClient.sendEmail(url);
         return " from Service A";
-    }
-
-
-    // the fall back method should:
-    //    a. have same return type as annotated method - serviceA()
-    //    b. take Exception as argument
-    //    c. be defined in same class as annotated method [CHECK]
-    public String serviceAFallBack(Exception ex) {
-        return " this is fallback method of serviceA" ;
     }
 }
